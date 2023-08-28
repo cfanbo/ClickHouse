@@ -4,6 +4,11 @@
 namespace DB
 {
 
+namespace ErrorCodes
+{
+    extern const int NUMBER_OF_ARGUMENTS_DOESNT_MATCH;
+}
+
 DataTypePtr FunctionTuple::getReturnTypeImpl(const DataTypes & arguments) const
 {
     if (arguments.empty())
